@@ -1,0 +1,28 @@
+//- Meta
+
+meta(charset='utf-8')
+meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+meta(name='theme-color' content='#000')
+meta(name='HandheldFriendly' content='True')
+meta(name='apple-mobile-web-app-capable' content='yes')
+meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+meta(name='format-detection' content='telephone=no')
+meta(name='format-detection' content='address=no')
+meta('http-equiv'='x-ua-compatible' content='ie=edge')
+
+block meta
+
+
+//- Links
+
+link(rel='shortcut icon' href='favicon.ico')
+
+- var stylesheets = [{file: 'css/site.css', version: '1'}];
+
+each stylesheet in stylesheets
+	link(
+		rel='stylesheet'
+		href=stylesheet.file + '?v=' + stylesheet.version
+		type='text/css')
+
+block link
